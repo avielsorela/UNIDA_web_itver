@@ -1,11 +1,55 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const title = "UNIDA ITVER";
 ---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const button = document.getElementById("cta-btn");
+  if (button) {
+    button.addEventListener("click", () => {
+      alert("¡Gracias por unirte a la revolución del desarrollo web!");
+    });
+  } 
+});
+  </script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <!-- Hero Section -->s
+  <section class="h-screen flex flex-col items-center justify-center text-center p-6">
+    <h1 class="text-5xl md:text-6xl font-bold text-blue-400 animate-pulse">{title}</h1>
+    <p class="text-xl mt-4 text-gray-300">Potencia tu desarrollo web con tecnologías modernas.</p>
+    <button id="cta-btn" class="mt-6 px-6 py-3 bg-blue-600 hover:bg-blue-700 transition rounded-lg shadow-lg text-lg font-semibold">
+      Únete Ahora
+    </button>
+  </section>
 
-<Layout>
-	<Welcome />
-</Layout>
+  <!-- Features Section -->
+  <section class="p-10 grid md:grid-cols-3 gap-6">
+    <div class="p-6 bg-gray-800 rounded-lg shadow-lg transform hover:scale-105 transition">
+      <h2 class="text-2xl font-semibold text-blue-400">⚡ Velocidad</h2>
+      <p class="text-gray-300 mt-2">Astro carga solo lo necesario, ofreciendo una experiencia ultrarrápida.</p>
+    </div>
+    <div class="p-6 bg-gray-800 rounded-lg shadow-lg transform hover:scale-105 transition">
+      <h2 class="text-2xl font-semibold text-green-400">🎨 Diseño Moderno</h2>
+      <p class="text-gray-300 mt-2">Tailwind CSS permite crear interfaces hermosas con facilidad.</p>
+    </div>
+    <div class="p-6 bg-gray-800 rounded-lg shadow-lg transform hover:scale-105 transition">
+      <h2 class="text-2xl font-semibold text-yellow-400">🛠️ Flexibilidad</h2>
+      <p class="text-gray-300 mt-2">Combina frameworks como React, Vue o Svelte sin esfuerzo.</p>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="text-center p-12 bg-blue-600">
+    <h2 class="text-3xl font-bold">¿Listo para transformar tu desarrollo web?</h2>
+    <button id="cta-btn" class="mt-4 px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow-lg hover:bg-gray-200 transition">
+      Comienza Ahora
+    </button>
+  </section>
+</body>
+</html>
